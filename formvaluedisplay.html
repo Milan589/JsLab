@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Form Example</title>
+
+</head>
+<body>
+
+<form name="form1" method="post">
+	<label>Name : </label>
+<input type="text"  name="name"><br>
+<label>Choose :</label>
+<input type="radio"  name="sex" value="Male">Male
+ <input type="radio" name="sex" value="Female">Female<br>
+
+<label>Choose:</label>
+		<select name="choose"> 
+			<option>---</option>
+			<option>CSIT</option>
+			<option>BIM</option>
+			<option>BCA</option>
+		</select><br>
+<input type="button" value="Display" onClick="display();">
+</form>
+<script type="text/javascript">
+function display() {
+  // DispWin = window.open('','NewWin', 'toolbar=no,status=no,width=300,height=200')
+  message = "Name : " + document.form1.name.value;
+  message += "<br> Sex : " + document.form1.sex.value;
+  message += "<br> Faculty : " + document.form1.choose.value ; 
+ // DispWin.document.write(message);
+ document.write(message);
+}
+</script>
+</body>
+</html>
